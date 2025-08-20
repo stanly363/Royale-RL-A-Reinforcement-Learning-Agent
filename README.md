@@ -87,7 +87,7 @@ Follow these steps to get the bot running on your system.
 
 ## How to Run the Bot
 
-Once the setup is complete, ensure the Clash Royale emulator is running and visible on your screen.
+Once the setup is complete, ensure the Clash Royale blue stacks emulator is running and fullscreened or windowed fullscreened and also visible on your screen. (Also ensure the player is on the page with the battle button)
 
 Then, simply run the main script from your activated virtual environment:
 ```bash
