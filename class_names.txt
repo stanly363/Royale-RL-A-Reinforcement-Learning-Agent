@@ -1,9 +1,0 @@
-archers
-arrows
-empty
-fireball
-giant
-knight
-mini-pekka
-minions
-musketeer

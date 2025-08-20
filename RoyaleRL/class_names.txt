@@ -1,0 +1,11 @@
+archers
+arrows
+empty
+fireball
+giant
+goblin_cage
+goblin_hut
+knight
+mini-pekka
+minions
+musketeer
