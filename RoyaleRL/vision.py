@@ -143,7 +143,7 @@ class CardClassifier:
             _, preds = torch.max(outputs, 1)
         return [self.class_names[p] for p in preds]
     
-# --- New ElixirVision Class (Integrated) ---
+# --- ElixirVision Class (Integrated) ---
 class ElixirVision:
     """
     Handles elixir detection using template matching.
@@ -184,7 +184,7 @@ class ElixirVision:
                 
         return int(best_match) if best_match else None
 
-# --- Main Vision Class: This ties everything together ---
+# --- Main Vision Class ---
 class Vision:
     """A single class to handle all vision-related tasks."""
     def __init__(self, scaler):
@@ -267,7 +267,6 @@ class Vision:
         if current_hand != self.last_known_hand:
             self.last_known_hand = current_hand
         
-        # --- ADDED: Detect enemy units on the screen ---
         detected_enemies = self.enemy_detector.detect_units(screenshot)
             
         return {
