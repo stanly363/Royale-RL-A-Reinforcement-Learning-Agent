@@ -20,7 +20,7 @@ class Scaler:
         except IndexError:
             raise ValueError("BlueStacks window not found. Please ensure the emulator is running and the title is correct.")
 
-        # Find the game area within the BlueStacks window using the combined methods
+        # Find the game area within the BlueStacks window 
         game_area = self._find_game_area_by_combined_methods(bluestacks_window)
         
         if not game_area:
@@ -38,11 +38,7 @@ class Scaler:
         print(f"Scaling factors: X={self.x_scale:.2f}, Y={self.y_scale:.2f}")
 
     def _find_game_area_by_combined_methods(self, bluestacks_window):
-        """
-        Finds the active game area within a window by detecting black contours for horizontal
-        boundaries and a color-based pixel scan for the top boundary. The top boundary is
-        adjusted to ignore the timer's black border before calculating side boundaries.
-        """
+
         bluestacks_rect = (bluestacks_window.left, bluestacks_window.top, bluestacks_window.width, bluestacks_window.height)
         screenshot_pil = ImageGrab.grab(bbox=bluestacks_rect)
         screenshot_np = np.array(screenshot_pil)
