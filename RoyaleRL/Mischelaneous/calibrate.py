@@ -12,7 +12,7 @@ DATA_DIR = "sorted_data/cards" # Point this to your test/validation folder
 CLASS_NAMES_PATH = "card_names.txt" # The file with your card names, one per line
 IMG_SIZE = 128
 BATCH_SIZE = 16
-# ---------------------
+
 
 def test_model(model, dataloader, device):
     """Calculates the accuracy of the model on the test dataset."""
