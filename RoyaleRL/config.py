@@ -8,7 +8,7 @@ REFERENCE_RESOLUTION = (565, 1007)
 # --- Image Processing Constants ---
 IMG_SIZE = 128
 ARENA_BBOX = (0.4490, 0.1298, 0.6990, 0.7529)
-# --- Offsets for OCR from your new mapping script ---
+# --- Offsets for OCR 
 # These are the relative positions of all OCR regions
 OCR_OFFSETS = [
     {'name': 'ptl', 'x_offset': 114, 'y_offset': 133, 'width': 39, 'height': 18},
@@ -20,7 +20,7 @@ OCR_OFFSETS = [
     {'name': 'time', 'x_offset': 482, 'y_offset': 23, 'width': 70, 'height': 27},
 ]
 
-# --- Card Offsets from your new mapping script ---
+# --- Card Offsets 
 # These are the relative positions of the 4 cards
 CARD_OFFSETS_WITH_SIZE = [
     (130, 837, 93, 120),
@@ -29,7 +29,7 @@ CARD_OFFSETS_WITH_SIZE = [
     (447, 836, 95, 120),
 ]
 
-# --- Elixir Offset from your new mapping script ---
+# --- Elixir Offset 
 ELIXIR_OFFSET = {
     'x': 132, 'y': 958, 'width': 114, 'height': 45
 }
