@@ -19,7 +19,7 @@ ALL_CARDS = list(CARD_COSTS.keys())
 CARD_TO_INDEX = {name: i for i, name in enumerate(ALL_CARDS)}
 NUM_CARD_TYPES = len(ALL_CARDS)
 
-# --- UPDATED: Calculate ACTION_DIM based on the grid size in agent.py ---
+
 x_steps = 18
 y_steps = 30
 NUM_GRID_LOCATIONS = x_steps * y_steps
@@ -98,7 +98,7 @@ def main():
     
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     
-    # --- UPDATED: Pass the new ACTION_DIM to the Agent ---
+
     ai_agent = Agent(state_dim=STATE_DIM, action_dim=ACTION_DIM, card_costs=CARD_COSTS, device=device)
     
     print("Bot starting with live learning agent. Press Ctrl+C to stop.")
