@@ -2,7 +2,7 @@ import os
 import time
 from PIL import ImageGrab
 
-# Import your custom classes and config
+
 from scaler import Scaler
 import config
 
@@ -10,7 +10,7 @@ import config
 CAPTURE_INTERVAL_SECONDS = 1 
 
 def get_user_choices():
-    """Prompts the user to select two different card slots."""
+
     while True:
         try:
             prompt = "Enter two card slot numbers (1-4), separated by a space: "
@@ -38,7 +38,7 @@ def get_user_choices():
             print("Error: Invalid input. Please enter numbers only.")
 
 def main():
-    """Main function to run the card capture script."""
+
     try:
         # Use your Scaler class to find the exact game area
         scaler = Scaler()
