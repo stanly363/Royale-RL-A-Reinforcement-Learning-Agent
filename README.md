@@ -58,8 +58,8 @@ Follow these steps to get the bot running on your system.
 
 1.  **Clone the Repository**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/stanly363/Royale-RL-A-Reinforcement-Learning-Agent
+    cd RoyalRL
     ```
 
 2.  **Create a Python Virtual Environment**
