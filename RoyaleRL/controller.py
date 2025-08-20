@@ -4,7 +4,7 @@ import time
 import cv2
 import numpy as np
 from PIL import ImageGrab
-import config # Import the config file to access ARENA_BBOX
+import config # Import the config
 
 class Controller:
     """Handles all mouse interactions with the game."""
@@ -33,7 +33,7 @@ class Controller:
         print(f"CONTROLLER: Clicking card at relative ({card_click_x}, {card_click_y})")
         self.click(card_click_x, card_click_y)
         
-        # --- NEW: Bounding Box Clamping Logic ---
+        # ---Bounding Box Clamping Logic ---
         
         # 1. Get the game window's current dimensions
         window_width, window_height = self.scaler.current_resolution
@@ -58,9 +58,7 @@ class Controller:
 
 
     def find_and_click(self, template_path, confidence=0.85):
-        """
-        Finds a scaled template on screen and clicks its center.
-        """
+
         template_img = self.scaler.scale_template(template_path)
         
         game_area = self.scaler.game_area_rect
