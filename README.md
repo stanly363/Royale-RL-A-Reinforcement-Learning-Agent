@@ -67,17 +67,17 @@ Follow these steps to get the bot running on your system.
 
 1. **Clone the Repository**
    ```
-   git clone <your-repo-url>
-   cd <your-repo-folder>
+   git clone https://github.com/stanly363/Royale-RL-A-Reinforcement-Learning-Agent
+   cd RoyaleRL
    ```
 2. **Create a Python Virtual Environment**
    ```
    python -m venv venv
    ```
 3. **Activate the Virtual Environment**
-   * On Windows (PowerShell):
+   * On Windows (CMD):
      ```
-     .\venv\Scripts\Activate.ps1
+     .\venv\Scripts\activate
      ```
    * On macOS/Linux:
      ```
