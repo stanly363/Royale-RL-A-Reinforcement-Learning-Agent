@@ -38,7 +38,7 @@ class GameStateManager:
         # Grab screenshot of only the game area for efficiency
         game_area_rect = self.scaler.game_area_rect
         
-        # Correctly format the bounding box for ImageGrab.grab()
+        # format the bounding box for ImageGrab.grab()
         bbox = (game_area_rect[0], game_area_rect[1], game_area_rect[0] + game_area_rect[2], game_area_rect[1] + game_area_rect[3])
         
         screen_pil = ImageGrab.grab(bbox=bbox)
@@ -178,7 +178,7 @@ class GameStateManager:
         my_roi_y = int(game_height * 0.40) 
         my_roi = screen_cv_gray[my_roi_y:game_height, :]
 
-        # Define the Region of Interest for your opponent's crowns at the top 40%
+        # Define the Region of Interest
         opponent_roi_y = 0
         opponent_roi_height = int(game_height * 0.40) 
         opponent_roi = screen_cv_gray[opponent_roi_y : opponent_roi_y + opponent_roi_height, :]
@@ -197,7 +197,6 @@ class GameStateManager:
             [pt[0], pt[1], pt[0] + win_w, pt[1] + win_h] for pt in zip(*win_locs_opponent[::-1])
         ]), res_win_opponent[win_locs_opponent], 0.3)
 
-        # We also need to check for lose crowns, but only on the opponent's side
         res_lose_opponent = cv2.matchTemplate(opponent_roi, lose_crown_template, cv2.TM_CCOEFF_NORMED)
         lose_locs_opponent = np.where(res_lose_opponent >= threshold)
         opponent_lose_boxes = self.non_max_suppression(np.array([
