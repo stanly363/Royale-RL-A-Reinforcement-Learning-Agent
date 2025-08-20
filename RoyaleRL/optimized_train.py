@@ -23,7 +23,6 @@ def train_model():
     else:
         print("WARNING: CUDA not found. Using CPU.")
 
-    # (Data loading code remains the same as before)...
     data_transforms = {
         'train': transforms.Compose([
             transforms.RandomResizedCrop(IMG_SIZE), transforms.RandomHorizontalFlip(),
@@ -52,7 +51,7 @@ def train_model():
     with open("class_names.txt", "w") as f:
         f.write("\n".join(class_names))
     
-    # (Model building code remains the same)...
+
     print("Building model...")
     model = models.mobilenet_v2(weights='IMAGENET1K_V1')
     for param in model.parameters():
@@ -75,7 +74,7 @@ def train_model():
     use_amp = device.type == 'cuda'
     scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
 
-    # --- THIS IS THE FIX: Wrap the loop in try...finally ---
+
     try:
         for epoch in range(EPOCHS):
             # (The inner loop code for training and validation is the same)...
@@ -123,7 +122,7 @@ def train_model():
         print("\nTraining interrupted by user. Saving best model...")
 
     finally:
-        # This block is GUARANTEED to run, whether the loop finishes or is interrupted.
+
         time_elapsed = time.time() - since
         print(f'\nTraining finished in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s')
         print(f'Best val Loss: {best_loss:4f}')
