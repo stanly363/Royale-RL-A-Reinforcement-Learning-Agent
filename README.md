@@ -162,7 +162,6 @@ The agent's "brain" can also be tuned.
 
 * **Error: "BlueStacks window not found"**: Make sure the emulator is running and that the window title in `scaler.py` exactly matches the title of your emulator window.
 * **Error: `pygetwindow.PyGetWindowException`**: This is a permissions error. **Run** your script as an **Administrator**.
-* **Error: `Activate.ps1 cannot be loaded...`**: This is a PowerShell security policy. Run this command in PowerShell once to fix it: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process`.
 
 ## Disclaimer
 
