@@ -157,7 +157,7 @@ The agent's "brain" can also be tuned.
 * **Consistency is Key**: Run the bot on the same emulator with the same resolution each time to ensure the vision system works reliably.
 * **Initial Learning**: Let the bot play at least 50-100 games on its own. This will populate the `replay_buffer.pkl` file with a diverse set of experiences for it to learn from.
 * **Dedicated Training**: While the bot learns a little after each game, its learning is shallow. For deep, meaningful improvement, periodically stop the bot and run a dedicated training session using the data it has collected.
-
+* **Avoid Spells Initially**: The bot struggles to grasp the timing and placement of spells like Arrows or Fireball without extensive training, so it's best to start with a deck of only troop and building cards.
 ## Troubleshooting
 
 * **Error: "BlueStacks window not found"**: Make sure the emulator is running and that the window title in `scaler.py` exactly matches the title of your emulator window.
